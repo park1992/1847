@@ -1,0 +1,47 @@
+前端时间看不到的。全栈 服务器端人员
+dba 运维开发工程师(服务器) 服务端开发人员(JAVA,PHP,NODE,NET)web前端
+**************************************************************
+图标，多表联查。多对一，一对多，聚合函数，存储过程，触发器。
+1、adminList:管理员列表集合  token：(过期时间)
+	_id:唯一标识
+	adminName:管理员账号
+	passWord:密码(加密) 明文:12343
+	loginTime:最后登录的时间
+	
+2、adminLog:管理员日志
+	_id:唯一标识
+	adminName:管理员名字
+	logType:日志类型 1、管理员登录  2、修改了密码
+	detail:详细说明
+	addTime:日志的生成时间
+
+3、userList用户
+店铺类别-->店铺-->商品类别-->商品
+三级联动
+省--市--区
+
+4、shopTypeList:店铺类别列表
+	_id:唯一标识
+	shopTypeName:店铺类别名称
+	shopTypePic:店铺类别的图片
+	addTime:店铺创建的时间
+
+5、shopList:店铺列表
+	_id:唯一标识
+	shopTypeId:店铺类别ID
+	shopName:店铺的名称
+	shopPic:店铺的图片
+	addTime:店铺创建的时间
+	
+6、goodsTypeList:商品类别
+	_id:唯一标识
+	goodsTypeName:商品类别名称
+	shopId:店铺的ID
+	addTime:店铺创建的时间
+	
+7、goodListL:商品列表
+	_id:唯一标识
+	goodsName:商品名称
+	goodPic:商品图片
+	goodsTypeId:商品类别ID
+	addTime:商品创建时间
